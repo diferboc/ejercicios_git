@@ -1604,7 +1604,7 @@ mi_babano.cortar()"""
 # Define una clase Deporte con los atributos nombre y numero_de_jugadores, y un método para comenzar el juego.
 # Crea una clase Baloncesto que herede de Deporte, agregue el atributo altura_de_la_canasta, y un método para lanzar la pelota.
 # Crea una clase Voleibol que herede de Deporte, agregue el atributo altura_de_la_red, y un método para servir.
-class Deporte:
+"""class Deporte:
     def __init__(self, nombre, numero_jugadores):
         self.nombre = nombre
         self.numero_jugadores = numero_jugadores
@@ -1632,33 +1632,195 @@ felinos = Voleibol("voleibol", 5, "1.80 metros")
 felinos.comenzar_juego()
 felinos.servir()  
 trotar= Deporte("atletismo", 1)
-trotar.comenzar_juego()             
+trotar.comenzar_juego() """            
 # 10. Empleado, Ingeniero, y Administrador
 # Define una clase Empleado con los atributos nombre y salario, y un método para trabajar.
 # Crea una clase Ingeniero que herede de Empleado, agregue el atributo especialidad, y un método para desarrollar un proyecto.
 # Crea una clase Administrador que herede de Empleado, agregue el atributo departamento, y un método para gestionar el personal.
+"""class Empleado:
+    def __init__(self, nombre, salario):
+        self.nombre = nombre
+        self.salario = salario
+    def trabajar(self):
+        return f"{self.nombre} esta trabajando"
 
+class Ingeniero(Empleado):
+    def __init__(self, nombre, salario, especialidad):
+        super().__init__(nombre, salario)        
+        self.especialidad = especialidad
+    def desarrollar_proyecto(self):
+        return f"el ingeniero {self.nombre} esta desarrolando el proyecto por {self.salario}"
+    
+class Administrador(Empleado):
+    def __init__(self, nombre, salario, departamento):
+        super().__init__(nombre, salario)        
+        self.departamento = departamento
+    def Gestionar_panl(self):
+        return f"gestionando el personal por {self.salario}---"
+    
+julian_ing = Ingeniero("julian", 5000000, "medio ambiente")
+adm_ariel = Administrador("ariel", 3000000, "cartera")
+print(julian_ing.desarrollar_proyecto())
+print(adm_ariel.Gestionar_panl())"""
+        
 # 11. Transportes, Auto, y Avión
 # Define una clase Transportes con los atributos tipo y capacidad, y un método para mover el transporte.
 # Crea una clase Auto que herede de Transportes, agregue el atributo numero_de_puertas, y un método para arrancar el motor.
 # Crea una clase Avión que herede de Transportes, agregue el atributo tipo_de_motor, y un método para despegar.
-
+"""class Transportes:
+    def __init__(self, tipo, capacidad):
+        self.tipo = tipo 
+        self.capacidad = capacidad
+    def mover(self):
+        print("moviendo el transporte<<<<<")
+   
+class Auto(Transportes):
+    def __init__(self, tipo, capacidad, numero_puertas):
+        super().__init__(tipo, capacidad)   
+    def arrancar_el_motor(self):
+        return(f"arrancando el motor de mi {self.tipo}...")
+    
+class Avion(Transportes):
+    def __init__(self, tipo, capacidad, tipo_de_motor):
+        super().__init__(tipo, capacidad)            
+        self.tipo_de_motor = tipo_de_motor
+    def despegar(self):
+        return f"el avion esta depegando ..."
+  
+bmw = Auto("automovil", 4, 2)
+boing_767 = Avion("avion", 250, "turbina")
+usando_bmw = bmw.arrancar_el_motor()
+despegar = boing_767.despegar()
+print(usando_bmw)
+print(despegar)"""             
 # 12. Planta, Árbol, y Flor
 # Define una clase Planta con los atributos nombre y tamaño, y un método para crecer.
 # Crea una clase Árbol que herede de Planta, agregue el atributo tipo_de_hoja, y un método para dar sombra.
 # Crea una clase Flor que herede de Planta, agregue el atributo color_de_petalos, y un método para florecer.
-
+"""class Planta:
+    def __init__(self, nombre, tamaño):
+        self.nombre = nombre
+        self.tamaño = tamaño
+    def crecer(self):
+        return f"{self.nombre} esta creciendo ... "
+    
+class Arbol(Planta):
+    def __init__(self, nombre, tamaño, tipo_de_hoja):
+        super().__init__(nombre, tamaño)
+        self.tipo_de_hoja = tipo_de_hoja
+    def dar_sombre(self):
+        return f"el {self.nombre} esta dando sombra"
+    
+class Flor(Planta):
+    def __init__(self, nombre, tamaño, color_de_petalos):
+        super().__init__(nombre, tamaño)        
+        self.color_de_petalos = color_de_petalos
+    def florecer(self):
+        return (f"{self.nombre} esta floreciendo")
+    
+aguacate = Arbol("aguacate", "mediano", "elipticas")
+rosa = Flor("rosa", "pequeño", "rojos")
+generar_sombra = aguacate.dar_sombre()
+print(generar_sombra)
+hacer_florecer = rosa.florecer()
+print(hacer_florecer) """       
+             
 # 13. Herramienta, Martillo, y Destornillador
 # Define una clase Herramienta con los atributos nombre y material, y un método para utilizar.
 # Crea una clase Martillo que herede de Herramienta, agregue el atributo peso, y un método para clavar clavos.
 # Crea una clase Destornillador que herede de Herramienta, agregue el atributo tipo_de_punta, y un método para ajustar tornillos.
-
+"""class Herramienta:
+    def __init__(self, nombre, material):
+        self.nombre = nombre
+        self.material = material
+    def utiliar(self):
+        return f"{self.nombre} se esta utilizando "
+    
+class Martillo(Herramienta):
+    def __init__(self, nombre, material, peso):
+        super().__init__(nombre, material)   
+        self.peso = peso
+    def clavar_clavos(self):
+        return f"con el {self.nombre} se esta clavando un clavo... "
+    
+class Destornillador(Herramienta):
+    def __init__(self, nombre, material, tipo_punta):
+        super().__init__(nombre, material)    
+        self.tipo_punta = tipo_punta
+    def ajustar_tornillos(self):
+        return f"con el {self.nombre} punta tipo {self.tipo_punta} se estan ajustando los tornillos ..."
+    
+mi_martillo = Martillo("martillo", "hierro", "1 kg")
+usar_martillo = mi_martillo.clavar_clavos()
+print(usar_martillo)
+mi_destornillador = Destornillador("destornillador", "acero", "pala")
+usar_destornillador = mi_destornillador.ajustar_tornillos()
+print(usar_destornillador)   """     
+                  
 # 14. Electrodoméstico, Secadora, y Licuadora
 # Define una clase Electrodoméstico con los atributos marca y modelo, y un método para encender.
 # Crea una clase Secadora que herede de Electrodoméstico, agregue el atributo capacidad, y un método para secar ropa.
 # Crea una clase Licuadora que herede de Electrodoméstico, agregue el atributo potencia, y un método para licuar alimentos.
-
+"""class Electrodomestico:
+    def __init__(self, marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+    def encender(self):
+        return f"encendiendo...."
+    
+class Secadora(Electrodomestico):
+    def __init__(self, marca, modelo, capacidad):
+        super().__init__(marca, modelo)        
+        self.capacidad = capacidad
+    def secar_ropa(self):
+        return f"secando la ropa..."
+    
+class Licuadora(Electrodomestico):
+    def __init__(self, marca, modelo, potencia):
+        super().__init__(marca, modelo)        
+        self.potencia = potencia
+    def  licuar_alimentos(self):
+        return f"licuando los alimetos ..."
+    
+mi_secadora = Secadora("samsung", "t5000", "16 libras")
+encender_secadora = mi_secadora.encender()
+secando = mi_secadora.secar_ropa()
+print(encender_secadora)
+print(secando)
+mi_licuadora = Licuadora("acer", "200", "500wtts")
+encender_licuadora = mi_licuadora.encender()
+licuar = mi_licuadora.licuar_alimentos()
+print(encender_licuadora)
+print(licuar) """       
 # 15. Vehículo, Tren, y Barco
 # Define una clase Vehículo con los atributos marca y modelo, y un método para moverse.
 # Crea una clase Tren que herede de Vehículo, agregue el atributo tipo_de_vía, y un método para transportar pasajeros.
 # Crea una clase Barco que herede de Vehículo, agregue el atributo capacidad_de_carga, y un método para navegar.
+"""class Vehiculo:
+    def __init__(self, marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+    def moverse(self):
+        return f"el {self.marca} , {self.modelo} se esta moviendo ..."
+    
+class Tren(Vehiculo):
+    def __init__(self, marca, modelo, tipo_de_via):
+        super().__init__(marca, modelo)        
+        self.tipo_de_via = tipo_de_via
+    def transportar_pasajeros(self):
+        return f"transportando pasajeros en el tren {self.modelo} modelo {self.marca}---"
+    
+class Barco(Vehiculo):
+    def __init__(self, marca, modelo, capacidad_de_carga):
+        super().__init__(marca, modelo)        
+        self.capacidad_de_carga = capacidad_de_carga
+    def navegar(self):
+        return f"el barco esta navegando ,,,,,"
+    
+mi_tren = Tren("asea", "electrico ", "ferrea")
+usar_tren = mi_tren.transportar_pasajeros() 
+print(usar_tren) 
+mi_barco = Barco("galeon", "carguero", "2000 toneladas ")
+navegar = mi_barco.navegar()
+print(navegar)"""      
+
